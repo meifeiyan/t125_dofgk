@@ -10,28 +10,38 @@
             padding: 0;
             background-color: black; 
             width: 100vw;
-            min-height: 100vh;
-            overflow-y: auto;
-	    overflow-x: hidden;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+	    overflow-y: auto;
+        }
+        .scale-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .content {
-            position: relative;
-            z-index: 10;
             color: white;
             text-align: center;
-            font-size: 24px;
+            font-size: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(0, 0, 0, 1);
-            padding: 20px 80px;
+            padding: 1.25rem 5%;
             border-radius: 10px;
-            width: 80%;
-            max-width: 1200px;
-            margin: 0px auto; /* Đẩy banner lên */
+            width: 90%;
+            max-width: 1000px;
+            margin: 1rem auto;
+            z-index: 2;
+            position: relative;
         }
         .logo {
-            width: 210px;
+            width: 240px;
             margin-right: 20px;
         }
         .text {
@@ -39,55 +49,190 @@
             font-family: 'Trebuchet MS', sans-serif;
         }
         .text h1 {
-            font-size: 35px;
+            font-size: 2rem;
             font-weight: bold;
             margin: 0;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
-        .text p {
-            font-size: 18px;
-            margin-top: 5px;
-            line-height: 0.5;
+        .text p { 
+            line-height: 0.1;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-            font-family: Dancing Script;
+            font-family: 'Dancing Script', cursive;
         }
-        /* Video không chỉnh sửa màu sắc, giữ nguyên chất lượng */
         .banner {
             width: 100%;
             text-align: center;
-            margin-top: -100px; /* Đẩy video lên */
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .banner video {
             width: 100%;
-            height: auto; /* Giữ đúng tỷ lệ */
-            filter: none; /* Không làm tối */
-            object-fit: contain; /* Hiển thị đầy đủ video */
+            height: auto;
+            object-fit: cover;
+            max-height: 60vh;
         }
         .extra-content {
             color: white;
+            text-align: left;
+            padding: 1.5rem;
+            font-size: 1.25rem;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            .logo {
+                margin-bottom: 10px;
+            }
+            .text h1 {
+                font-size: 1.8rem;
+            }
+            .text p {
+                font-size: 1rem;
+            }
+        }
+	body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
             text-align: center;
-            padding: 50px;
-            font-size: 20px;
+        }
+        .player-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .player-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 225px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        .player-card img {
+            width: 235px;
+            height: auto;
+            border-radius: 0;
+            margin-bottom: 10px;
+        }
+        .player-card strong {
+            font-size: 1.1rem;
+        }
+        .footer {
+            background-color: #e60000;
+            color: white;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        .footer .sponsors img {
+            max-width: 15000px;
+            margin: 20px;
+        }
+        .footer .social-icons {
+            margin: 10px 0;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .footer .links a {
+            display: inline-block;
+            margin: 5px 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .footer .copyright {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <img src="T1logo_square.webp" alt="T1 Logo" class="logo">
-        <div class="text">
-            <h1>TOGETHER AS 1</h1>
-            <p>Rooted in our legacy of raising trophies</p>
-            <p>and inspired by our passion for victory, we are Together as 1.</p>
+    <div class="scale-wrapper">
+        <div class="content">
+            <img src="T1logo_square.webp" alt="T1 Logo" class="logo">
+            <div class="text">
+                <h1>TOGETHER AS 1</h1>
+                <p>Rooted in our legacy of raising trophies</p>
+                <p>and inspired by our passion for victory, we are Together as 1.</p>
+            </div>
+        </div>
+        <div class="banner">
+            <video autoplay muted loop playsinline>
+                <source src="TikDown.com_TikTok_Media_001_309ddf9089463bc99050c32919270c5b.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
         </div>
     </div>
-    <div class="banner">
-        <video autoplay muted loop playsinline>
-            <source src="TikDown.com_TikTok_Media_001_309ddf9089463bc99050c32919270c5b.mp4" type="video/mp4">
-            Trình duyệt của bạn không hỗ trợ video.
-        </video>
+    <br>
+    <h1 style="font-family: Dancing Script;font-size:50px">T1 2025 League of Legends Roster</h1>
+    <div class="player-container">
+        <div class="player-card">
+            <img src="Doran.jpg" alt="Doran">
+	    <br>
+            <strong>Choi “Doran” Hyeonjoon</strong>
+            <p>Đường trên</p>
+	    <p><a href='https://play.sooplive.co.kr/choi15778/' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/choi_doran/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Doran_(Choi_Hyeon-joon)' target='_blank'>Wiki</a></p>
+        </div>
+        <div class="player-card">
+            <img src="Oner.jpg" alt="Oner">
+	    <br>
+            <strong>Moon “Oner” Hyeonjun</strong>
+            <p>Đi rừng</p>
+	    <p><a href='https://play.sooplive.co.kr/ansguswns519/' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/t1_oner/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Oner' target='_blank'>Wiki</a></p>
+        </div>
+        <div class="player-card">
+            <img src="Faker.jpg" alt="Faker">
+	    <br>
+            <strong>Lee “Faker” Sanghyeok</strong>
+            <p>Đường giữa</p>
+	    <p><a href='https://ch.sooplive.co.kr/leesh2148' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/faker/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Faker' target='_blank'>Wiki</a></p>
+        </div>
+        <div class="player-card">
+            <img src="Gumayusi.jpg" alt="Gumayusi">
+	    <br>
+            <strong>Lee “Gumayusi” Minhyung</strong>
+            <p>Đường dưới</p>
+	    <p><a href='https://ch.sooplive.co.kr/rkalalsgud' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/t1_gumayusi/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Gumayusi' target='_blank'>Wiki</a></p>
+        </div>
+        <div class="player-card">
+            <img src="Keria.jpg" alt="Keria">
+	    <br>
+            <strong>Ryu “Keria” Minseok</strong>
+            <p>Hỗ trợ</p>
+	    <p><a href='https://ch.sooplive.co.kr/fbalstjr1234' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/keria_minseok/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Keria' target='_blank'>Wiki</a></p>
+        </div>
+	<br>
     </div>
-    <div class="extra-content">
-        <p>Nội dung đang được cập nhật.</p>
-    </div>
+    <footer class="footer">
+        <div class="sponsors">
+            <img src="NTT.png" alt="Sponsor 1">
+        </div>
+    </footer>
+    <br>
+        <div class="social-icons">
+            <a href="https://instagram.com/t1lol" target="_blank">T1 Instagram</a>
+            <a href="https://x.com/T1LoL" target="_blank">T1 X</a>
+            <a href="https://weibo.com/SKTT1LOL" target="_blank">T1 Weibo</a>
+            <a href="https://t1.gg" target="_blank">T1 Official Site</a>
+        </div>
+	<br>
+        <div class="links">
+            <a href="https://ch.sooplive.co.kr/t1esports">T1 Esports SOOP</a>
+            <a href="https://shop-t1.gg">T1 Shop</a>
+            <a href="https://t1.fan">T1 Membership</a>
+            <a href="https://t1a.gg">T1 Academy</a>
+        </div>
+	<br>
+        <div class="copyright">
+            COPYRIGHT @ 2025 SK Telecom CS T1 Co. ALL RIGHTS RESERVED
+        </div>
 </body>
 </html>

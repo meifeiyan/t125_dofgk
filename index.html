@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T125 League of Legends</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: black; 
+            width: 100vw;
+            min-height: 100vh;
+            overflow-y: auto;
+	    overflow-x: hidden;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 1);
+            padding: 20px 80px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0px auto; /* Đẩy banner lên */
+        }
+        .logo {
+            width: 210px;
+            margin-right: 20px;
+        }
+        .text {
+            text-align: left;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        .text h1 {
+            font-size: 35px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+        .text p {
+            font-size: 18px;
+            margin-top: 5px;
+            line-height: 0.5;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            font-family: Dancing Script;
+        }
+        /* Video không chỉnh sửa màu sắc, giữ nguyên chất lượng */
+        .banner {
+            width: 100%;
+            text-align: center;
+            margin-top: -100px; /* Đẩy video lên */
+        }
+        .banner video {
+            width: 100%;
+            height: auto; /* Giữ đúng tỷ lệ */
+            filter: none; /* Không làm tối */
+            object-fit: contain; /* Hiển thị đầy đủ video */
+        }
+        .extra-content {
+            color: white;
+            text-align: center;
+            padding: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="T1logo_square.webp" alt="T1 Logo" class="logo">
+        <div class="text">
+            <h1>TOGETHER AS 1</h1>
+            <p>Rooted in our legacy of raising trophies</p>
+            <p>and inspired by our passion for victory, we are Together as 1.</p>
+        </div>
+    </div>
+    <div class="banner">
+        <video autoplay muted loop playsinline>
+            <source src="TikDown.com_TikTok_Media_001_309ddf9089463bc99050c32919270c5b.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+    </div>
+    <div class="extra-content">
+        <p>Nội dung đang được cập nhật.</p>
+    </div>
+</body>
+</html>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T125 League of Legends</title>
     <style>
+	a:link {color: white}
+	a:visited {color: white}
+	a: hover {color: red}
         body, html {
             margin: 0;
             padding: 0;
@@ -44,6 +47,16 @@
             width: 240px;
             margin-right: 20px;
         }
+        .ending {
+            width: 100%;
+            margin-right: 20px;
+        }
+	.avatarplayer {
+            width: 235px;
+            height: auto;
+            border-radius: 0;
+            margin-bottom: 10px;
+        }
         .text {
             text-align: left;
             font-family: 'Trebuchet MS', sans-serif;
@@ -54,10 +67,21 @@
             margin: 0;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
+	.text1 h2 {
+	    font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
         .text p { 
             line-height: 0.1;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
             font-family: 'Dancing Script', cursive;
+        }
+	.text1 p { 
+            line-height: 0.1;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
         .banner {
             width: 100%;
@@ -94,6 +118,28 @@
             .text p {
                 font-size: 1rem;
             }
+	    .player-card {
+                width: 90%;
+                padding: 15px;
+            }
+	    .player-details {
+                flex-direction: column !important;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+		display: flex;
+            }
+            .player-details img {
+                max-width: 80%;
+            }
+	    .footer img {
+		margin-bottom: 10px;
+		width:90%;
+	    }
+            .text1 {
+                max-width: 90%;
+		order: 1;
+            }
         }
 	body {
             font-family: Arial, sans-serif;
@@ -115,6 +161,11 @@
             width: 225px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .player-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
         }
         .player-card img {
             width: 235px;
@@ -152,6 +203,40 @@
         .footer .copyright {
             margin-top: 10px;
         }
+	.player-details {
+            padding: 20px;
+            color: white;
+            text-align: left;
+        }
+	.player-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 20px auto;
+    gap: 30px;
+    text-align: left;
+}
+
+.avatarplayer {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+	.player-details:nth-child(odd) {
+            flex-direction: row;
+        }
+        .player-details:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+.player-details .text {
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+}
     </style>
 </head>
 <body>
@@ -173,43 +258,145 @@
     </div>
     <br>
     <h1 style="font-family: Dancing Script;font-size:50px">T1 2025 League of Legends Roster</h1>
+    <p> Click on the image to view player information.</p>
     <div class="player-container">
         <div class="player-card">
-            <img src="Doran.jpg" alt="Doran">
+	    <a href="#doran">
+            <img src="Doran.jpg" alt="Doran"></a>
 	    <br>
             <strong>Choi “Doran” Hyeonjoon</strong>
             <p>Top Laner</p>
 	    <p><a href='https://play.sooplive.co.kr/choi15778/' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/choi_doran/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Doran_(Choi_Hyeon-joon)' target='_blank'>Wiki</a></p>
         </div>
         <div class="player-card">
-            <img src="Oner.jpg" alt="Oner">
+	    <a href="#oner">
+            <img src="Oner.jpg" alt="Oner"></a>
 	    <br>
             <strong>Moon “Oner” Hyeonjun</strong>
             <p>Jungler</p>
 	    <p><a href='https://play.sooplive.co.kr/ansguswns519/' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/t1_oner/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Oner' target='_blank'>Wiki</a></p>
         </div>
         <div class="player-card">
-            <img src="Faker.jpg" alt="Faker">
+	    <a href="#faker">
+            <img src="Faker.jpg" alt="Faker"></a>
 	    <br>
             <strong>Lee “Faker” Sanghyeok</strong>
             <p>Mid Laner</p>
 	    <p><a href='https://ch.sooplive.co.kr/leesh2148' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/faker/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Faker' target='_blank'>Wiki</a></p>
         </div>
         <div class="player-card">
-            <img src="Gumayusi.jpg" alt="Gumayusi">
+	    <a href="#gumayusi">
+            <img src="Gumayusi.jpg" alt="Gumayusi"></a>
 	    <br>
             <strong>Lee “Gumayusi” Minhyung</strong>
             <p>Bot Laner</p>
 	    <p><a href='https://ch.sooplive.co.kr/rkalalsgud' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/t1_gumayusi/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Gumayusi' target='_blank'>Wiki</a></p>
         </div>
         <div class="player-card">
-            <img src="Keria.jpg" alt="Keria">
+	    <a href="#keria">
+            <img src="Keria.jpg" alt="Keria"></a>
 	    <br>
             <strong>Ryu “Keria” Minseok</strong>
             <p>Supporter</p>
 	    <p><a href='https://ch.sooplive.co.kr/fbalstjr1234' target='_blank'>Sooplive</a> | <a href='https://www.instagram.com/keria_minseok/' target='_blank'>Instagram</a>| <a href='https://lol.fandom.com/wiki/Keria' target='_blank'>Wiki</a></p>
         </div>
 	<br>
+    </div>
+    <h1 style="font-family: Dancing Script;font-size:50px">T1 Player Profile</h1>
+	        <div id="doran" class="player-details">
+            <img src="Doran.png" alt="Doran" class="avatarplayer">
+            <div class="text1">
+                <h2>Choi “Doran” Hyeonjoon (최현준)</h2>
+                <ul>
+                    <li>Birthday: 22/7/2000</li>
+                    <li>Individual Awards:</li>
+                    <ul>
+                        <li>LCK 2nd All-Pro Team x3 (Summer 2022, Summer 2023, Summer 2024)</li>
+                        <li>LCK 3rd All-Pro Team x2 (Spring 2020, Spring 2024)</li>
+                    </ul>
+                    <li>Favourite Champ: Gnar, K’sante, Aatrox, Kled, Renekton, Jax</li>
+                </ul>
+            </div>
+        </div>
+        <div id="oner" class="player-details">
+            <img src="Oner.png" alt="Oner" class="avatarplayer">
+            <div class="text1">
+                <h2>Moon “Oner” Hyeonjun (문현준) – Owner of the Rift</h2>
+                <ul>
+                    <li>Birthday: 24/12/2002</li>
+                    <li>Individual Awards:</li>
+                    <ul>
+                        <li>LCK Finals MVP x1 (Spring 2022)</li>
+                        <li>LCK Jungle of the Year x3 (2022, 2023, 2024)</li>
+                        <li>LCK 1st All-Pro Team x1 (Spring 2023)</li>
+                        <li>LCK 2nd All-Pro Team x3 (Spring 2022, Summer 2022, Spring 2024)</li>
+                        <li>LCK 3rd All-Pro Team x1 (Summer 2024)</li>
+                    </ul>
+                    <li>Favourite Champ: Nidalee, Viego, Lee Sin, Nocturne, Xin Zhao, Vi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="faker" class="player-details">
+            <img src="Faker.png" alt="Faker" class="avatarplayer">
+            <div class="text1">
+                <h2>Lee “Faker” Sanghyeok (이상혁) – The Unkillable Demon King</h2>
+                <ul>
+                    <li>Birthday: 7/5/1996</li>
+                    <li>Individual Awards:</li>
+                    <ul>
+                        <li>LoL Esports Hall of Legends inductee (2024)</li>
+                        <li>Worlds MVP x2 (2016, 2024)</li>
+                        <li>MSI MVP (2016)</li>
+                        <li>Esports World Cup MVP (2024)</li>
+                        <li>LCK Player of the Year x2 (2023, 2024)</li>
+                        <li>LCK Mid Laner of the Year x2 (2023, 2024)</li>
+                        <li>LCK Season MVP x2 (Summer 2013, Winter 2014)</li>
+                        <li>LCK Finals MVP (Summer 2015)</li>
+                        <li>LCK 1st All-Pro Team x2 (Spring 2022, Spring 2023)</li>
+                        <li>LCK 2nd All-Pro Team x2 (Summer 2022, Spring 2024)</li>
+                        <li>LCK 3rd All-Pro Team x1 (Spring 2020)</li>
+                        <li>All-Star appearances x7 (2014, 2015, 2016, 2017, 2018, 2019, 2020)</li>
+                    </ul>
+                    <li>Favourite Champ: Leblanc, Zed, Ahri, Azir, Ryze, Orianna, Yasuo</li>
+                </ul>
+            </div>
+    </div>
+    <div id="gumayusi" class="player-details">
+    <img src="Gumayusi.png" alt="Gumayusi" class="avatarplayer">
+    <div class="text1">
+        <h2>Lee “Gumayusi” Min-hyeong (이민형) – The Demon Prince</h2>
+        <ul>
+            <li>Birthday: 6/2/2002</li>
+            <li>Individual Awards:</li>
+            <ul>
+                <li>LCK Bottom of the Year x2 (2023, 2024)</li>
+                <li>LCK 1st All-Pro Team x2 (Spring 2022, Spring 2023)</li>
+                <li>LCK 3rd All-Pro Team x1 (Spring 2024)</li>
+            </ul>
+            <li>Favourite Champ: Caitlyn, Jinx, Aphelios, Draven, Varus, Jhin</li>
+        </ul>
+    </div>
+</div>
+    <div id="keria" class="player-details">
+        <img src="Keria.png" alt="Keria" class="avatarplayer">
+        <div class="text1">
+            <h2>Ryu “Keria” Min-seok (류민석) - Legendary Genius Monster</h2>
+            <ul>
+                <li>Birthday: 14/10/2002</li>
+                <li>Individual Awards:</li>
+                <ul>
+                    <li>LCK MVP x2 (Spring 2022, Spring 2023)</li>
+                    <li>LCK Player of the Split (Spring 2023)</li>
+                    <li>LCK Supporter of the Year x4 (2021, 2022, 2023, 2024)</li>
+                    <li>LCK 1st All-Pro Team x6 (Spring 2020, Spring 2021, Summer 2021, Spring 2022, Spring 2023, Spring 2024)</li>
+                    <li>LCK 2nd All-Pro Team x2 (Summer 2020, Summer 2022)</li>
+                    <li>LCK 3rd All-Pro Team x1 (Summer 2024)</li>
+                    <li>LCK Young Player Award – (Spring 2020)</li>
+                </ul>
+                <li>Favourite Champ: Pyke, Thresh, Lux, Renata Glasc, Tahm Kench, Bard, Ashe</li>
+            </ul>
+        </div>
     </div>
     <footer class="footer">
         <div class="sponsors">
@@ -233,11 +420,13 @@
 	<br>
         <div class="copyright">
             COPYRIGHT @ 2025 SK Telecom CS T1 Co. ALL RIGHTS RESERVED
-	<br>
-	    Tiktok: @lsh.nhq
-	<footer class="footer">
-	    Nguyễn Phi Yến - 12A1
-	 </footer>
+	    <br>
+	    <a href='https://www.tiktok.com/@lsh.nhq' target='_blank'>Video credit: https://www.tiktok.com/@lsh.nhq</a>
         </div>
+	<footer class="footer">
+        <div class="sponsors">
+            <p> Nguyễn Phi Yến - 12A1 </p>
+        </div>
+    	</footer>
 </body>
 </html>

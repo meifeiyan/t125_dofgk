@@ -240,9 +240,8 @@
     </style>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="LegendNeverDie.mp3" type="audio/mpeg">
-	Trình duyệt của bạn không hỗ trợ video.
+    <audio autoplay loop muted onloadedmetadata="this.muted=false;">
+    	<source src="LegendNeverDie.mp3" type="audio/mpeg">
     </audio>
     <div class="scale-wrapper">
         <div class="content">
